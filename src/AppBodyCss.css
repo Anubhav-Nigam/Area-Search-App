@@ -1,0 +1,37 @@
+.submit_error_div{
+  color: red;
+  display: none;
+}
+
+.show-div{
+  display: block;
+}
+
+.area-search-app-body-enter-details{
+  text-align: center;
+  border: 1px solid black;
+  min-height: 130px;
+  padding-top: 22px;
+  padding-bottom: 28px;
+  margin-top: 100px;
+  margin-bottom: 450px;
+}
+
+.display_response_message{
+  text-align: center;
+  padding-top: 10px;
+}
+
+.table-headings{
+  font-weight: bolder;
+  text-align: center;
+}
+
+.table-body{
+  text-align: center;
+}
+
+.go_back_button{
+  margin-left: 46%;
+  margin-bottom: 50px;
+}
