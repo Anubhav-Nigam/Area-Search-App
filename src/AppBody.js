@@ -48,14 +48,14 @@ class AppBody extends Component {
           error_text='';
           $.ajax({
             method: 'GET',
-            url: "http://postalpincode.in/api/pincode/" +val,
+            url: "https://api.postalpincode.in/pincode/" +val,
             dataType: 'json',
             jsonp: false,
             success: function(response) {
               console.log(response);
-              if (response.Status === 'Success') {
-                message=response.Message;
-                postOffices=response.PostOffice;
+              if (response[0].Status === 'Success') {
+                message=response[0].Message;
+                postOffices=response[0].PostOffice;
                 printData=postOffices.map((option, index) => {
                   return(
                         <div key={index}>
@@ -71,8 +71,8 @@ class AppBody extends Component {
                 })
                 this.setState({displaySearchResults:true});
               }
-              else if (response.Status === 'Error') {
-                error_text=response.Message;
+              else if (response[0].Status === 'Error') {
+                error_text=response[0].Message;
                 this.setState({showErrorText:true});
                 setTimeout(function() {
                   this.setState({showErrorText:false});
